@@ -1,0 +1,93 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background-color: #2e396d;
+    margin: 0;
+    padding: 10px;
+}
+
+.calculator {
+    width: 80%;
+    background-color: #929292;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+.display-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#display {
+    flex: 1;
+    height: 40px;
+    font-size: 1.2em;
+    text-align: right;
+    padding: 5px;
+}
+
+#button-next-to-display {
+    height: 40px;
+    margin-left: 10px;
+    padding: 5px 10px;
+    font-size: 1.2em;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    padding: 15px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 4px;
+    background-color: #4c5eae;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+  }
+  
+  .history {
+    width: 200px;
+    background-color: #929292;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .history h2 {
+    margin: 0;
+    margin-bottom: 10px;
+  }
+  
+  .history ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .history ul li {
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .history ul li button {
+    background-color: #9e271f;
+    color: #fff;
+    font-size: 0.8em;
+    padding: 5px;
+    border: none;
+    border-radius: 4px;
+  }
