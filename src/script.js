@@ -62,5 +62,30 @@ function clearHistory() {
   displayHistory();
 }
 
+// Event listener, lai uztvertu tastatūras ievadi
+document.addEventListener("keydown", function (event) {
+  const key = event.key;
+
+  // Atļauj ciparus un operatorus
+  if (!isNaN(key) || ["+", "-", "*", "/", "."].includes(key)) {
+    appendNumber(key);
+  }
+
+  // Enter taustiņš aprēķināšanai
+  if (key === "Enter") {
+    calculate();
+  }
+
+  // Backspace taustiņš dzēšanai
+  if (key === "Backspace") {
+    display.value = display.value.slice(0, -1);
+  }
+
+  // Escape taustiņš, lai notīrītu ekrānu
+  if (key === "Escape") {
+    clearDisplay();
+  }
+});
+
 // Attēlo vēsturi pie lapas ielādes
 displayHistory();
